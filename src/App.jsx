@@ -35,7 +35,7 @@ export default function App() {
   return (
     <>
       <div className="container" >
-        <h1 className='pt-5 text-center'>To-Do List</h1>
+        <h1 className='pt-5 text-center text-danger'>TO-DO LIST</h1>
         <div className="input-group mt-3 ">
           <input
             type="text"
@@ -59,7 +59,6 @@ export default function App() {
                     type="text"
                     value={updateTask}
                     onChange={(e) => setUpdateTask(e.target.value)}
-                    // onClick={}
                   />
                   <div className=''>
                     <button className='btn btn-success' onClick={() => saveEdit(key)}>Save</button>
@@ -81,52 +80,3 @@ export default function App() {
     </>
   )
 }
-
-// import React, { useState } from 'react';
-// import './App.css';
-
-// function App() {
-//   const [tasks, setTasks] = useState([]);
-//   const [newTask, setNewTask] = useState('');
-
-//   const handleInputChange = (event) => {
-//     setNewTask(event.target.value);
-//   };
-
-//   const handleAddTask = () => {
-//     if (newTask.trim() !== '') {
-//       setTasks([...tasks, newTask]);
-//       setNewTask('');
-//     }
-//   };
-
-//   const handleDeleteTask = (index) => {
-//     const updatedTasks = tasks.filter((_, i) => i !== index);
-//     setTasks(updatedTasks);
-//   };
-
-//   return (
-//     <div className="App">
-//       <h1>To-Do List</h1>
-//       <div className="task-input">
-//         <input
-//           type="text"
-//           value={newTask}
-//           onChange={handleInputChange}
-//           placeholder="Enter a new task"
-//         />
-//         <button onClick={handleAddTask}>Add</button>
-//       </div>
-//       <ul className="task-list">
-//         {tasks.map((task, index) => (
-//           <li key={index}>
-//             {task}
-//             <button onClick={() => handleDeleteTask(index)}>Delete</button>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default App;

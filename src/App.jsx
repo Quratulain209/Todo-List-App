@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import './App.css'
 
 export default function App() {
   const [task, setTask] = useState('');
@@ -35,7 +34,7 @@ export default function App() {
   return (
     <>
       <div className="container" >
-        <h1 className='pt-5 text-center text-danger'>TO-DO LIST</h1>
+        <h1 className='pt-5 text-center text-danger'>TODO LIST APP</h1>
         <div className="input-group mt-3 ">
           <input
             type="text"
